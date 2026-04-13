@@ -1,10 +1,10 @@
-create type status_type as enum ('New', 'In processing', 'Ready to delivery', 'Completed', 'Discarded');
+create type art_rooms.status_type as enum ('New', 'In processing', 'Ready to delivery', 'Completed', 'Discarded');
 
-alter type status_type owner to rtysem;
+alter type art_rooms.status_type owner to vibecoderhex;
 
-create type payment_type as enum ('cash', 'card', 'transaction');
+create type art_rooms.payment_type as enum ('cash', 'card', 'transaction');
 
-alter type payment_type owner to rtysem;
+alter type art_rooms.payment_type owner to vibecoderhex;
 
 create table category
 (
@@ -17,7 +17,7 @@ create table category
 );
 
 alter table category
-    owner to rtysem;
+    owner to vibecoderhex;
 
 create table supplier
 (
@@ -34,7 +34,7 @@ create table supplier
 );
 
 alter table supplier
-    owner to rtysem;
+    owner to vibecoderhex;
 
 create table product
 (
@@ -61,7 +61,7 @@ create table product
 );
 
 alter table product
-    owner to rtysem;
+    owner to vibecoderhex;
 
 create index fk__index
     on product (supplier_id, category_id);
@@ -78,7 +78,7 @@ create table warehouse
 );
 
 alter table warehouse
-    owner to rtysem;
+    owner to vibecoderhex;
 
 create table product_and_warehouses
 (
@@ -95,7 +95,7 @@ create table product_and_warehouses
 );
 
 alter table product_and_warehouses
-    owner to rtysem;
+    owner to vibecoderhex;
 
 create index product_and_warehouses_idx_fk
     on product_and_warehouses (product_id, warehouse_id)
@@ -116,7 +116,7 @@ create table client
 );
 
 alter table client
-    owner to rtysem;
+    owner to vibecoderhex;
 
 create table "Order"
 (
@@ -136,7 +136,7 @@ create table "Order"
 );
 
 alter table "Order"
-    owner to rtysem;
+    owner to vibecoderhex;
 
 create index order_client_id_index
     on "Order" (client_id);
@@ -156,5 +156,5 @@ create table product_and_order
 );
 
 alter table product_and_order
-    owner to rtysem;
+    owner to vibecoderhex;
 
