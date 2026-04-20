@@ -1,4 +1,4 @@
-INSERT INTO product_and_warehouses (product_and_warehousesid, product_id, warehouse_id, quantity_of_product_in_warehouses) VALUES
+INSERT INTO art_rooms.product_and_warehouses (product_and_warehousesid, product_id, warehouse_id, quantity_of_product_in_warehouses) VALUES
 -- Товар 1 (Кухня Модерн 2.4) - популярная модель, есть на 4 складах
 (1, 1, 1, 5),
 (2, 1, 2, 3),
