@@ -1,4 +1,4 @@
-CREATE VIEW warehouse_price_sum_view AS
+CREATE OR REPLACE VIEW warehouse_price_sum_view AS
     SELECT
         warehouse.name,
         SUM(product.costprice * product_and_warehouses.quantity_of_product_in_warehouses) AS cost_prise_sum,
